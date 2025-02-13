@@ -7,7 +7,7 @@ const About = () => {
   return (
     <div className="w-full h-full flex flex-col justify-center items-center relative">
       <Nav />
-      <div className="w-full max-w-[700px] h-auto bg-[#041E23] text-white border border-[#0E464F] relative sm:top-40 top-20 rounded-[40px] flex flex-col items-center gap-8 sm:p-[48px] p-4 mx-auto">
+      <div className="w-[95%] sm:w-full max-w-[700px] h-auto bg-[#041E23] text-white border border-[#0E464F] relative sm:top-32 top-20 rounded-[40px] flex flex-col items-center gap-8 sm:p-[48px] p-4 mx-auto">
         <p className="text-[14px]">
           Event Ticket Booking UI – Open Source Practice Project 🎟️ <br />
           <br />

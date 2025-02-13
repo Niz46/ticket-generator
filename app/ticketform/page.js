@@ -94,7 +94,7 @@ const TicketForm = () => {
     <div className="w-full h-full flex flex-col justify-center items-center relative">
       <Nav />
       {/* Container */}
-      <div className="w-full max-w-[700px] h-auto bg-[#041E23] text-white border border-[#0E464F] relative top-40 rounded-[40px] flex flex-col items-center gap-8 sm:p-[48px] p-4 mx-auto">
+      <div className="w-full max-w-[650px] h-auto bg-[#041E23] text-white border border-[#0E464F] relative top-32 rounded-[40px] flex flex-col items-center gap-8 sm:p-[48px] p-4 mx-auto">
         {/* Header: Title and Progress Bar */}
         <div className="w-full flex flex-col">
           <div className="flex items-center justify-between">

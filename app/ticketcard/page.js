@@ -32,18 +32,18 @@ const TicketCard = () => {
 
   const handleDownloadTicket = () => {
     const ticketData = `
-Ticket for Techember Fest ’25
-Name: ${fullName}
-Email: ${email}
-Ticket Type: ${
+    Ticket for Techember Fest ’25
+    Name: ${fullName}
+    Email: ${email}
+    Ticket Type: ${
       selectedTicket
         ? selectedTicket.label === "free"
           ? "free"
           : `$${selectedTicket.price}`
         : ""
     }
-Number of Tickets: ${numberOfTickets}
-Special Request: ${specialRequest}
+    Number of Tickets: ${numberOfTickets}
+    Special Request: ${specialRequest}
     `;
     const blob = new Blob([ticketData], { type: "text/plain;charset=utf-8" });
     const url = URL.createObjectURL(blob);
@@ -64,10 +64,7 @@ Special Request: ${specialRequest}
   return (
     <div className="w-full h-full flex flex-col justify-center items-center relative">
       <Nav />
-      <div
-        className="w-full max-w-[700px] h-auto bg-[#041E23] text-white border border-[#0E464F] relative 
-                   sm:top-40 top-20 rounded-[40px] flex flex-col items-center gap-8 sm:p-[48px] p-4 mx-auto"
-      >
+      <div className="w-[95%] sm:w-full max-w-[700px] h-auto bg-[#041E23] text-white border border-[#0E464F] relative sm:top-32 top-20 rounded-[40px] flex flex-col items-center gap-8 sm:p-[48px] p-4 mx-auto">
         {/* Header: Title and Progress Bar */}
         <div className="w-full flex flex-col">
           <div className="flex items-center justify-between">
@@ -94,26 +91,21 @@ Special Request: ${specialRequest}
               </strong>
             </p>
           </div>
-          <div
-            className="bg-[url(https://res.cloudinary.com/dbitkdy7t/image/upload/v1739378175/Subtract_guklfs.svg)]
-                       w-full max-w-[300px] h-[600px] flex flex-col items-center relative"
-          >
-            <div
-              className="w-full max-w-[260px] h-[456px] p-[14px] rounded-2xl border border-[#24A0B5] 
-                         absolute top-6 flex flex-col items-center gap-3"
-            >
+          <div className="bg-[url(https://res.cloudinary.com/dbitkdy7t/image/upload/v1739378175/Subtract_guklfs.svg)] w-full max-w-[300px] h-[600px] flex flex-col items-center relative">
+            <div className="w-full max-w-[260px] h-[456px] p-[14px] rounded-2xl border border-[#24A0B5] absolute top-6 flex flex-col items-center gap-3">
               <div className="flex flex-col items-center gap-1">
                 <h1 className="text-[34px]">Techember Fest ’25</h1>
                 <p className="text-[14px]">📍 04 Rumens road, Ikoyi, Lagos</p>
                 <p className="text-[14px]">📅 March 15, 2025 | 7:00 PM</p>
               </div>
-              <div className="w-full max-w-[140px] h-[140px] rounded-xl border-4 border-[#24A0B5]">
+              <div className="w-full max-w-[140px] h-[140px] rounded-xl border-4 border-[#24A0B5] overflow-hidden">
                 {avatarUrl ? (
                   <CldImage
                     src={avatarUrl}
                     alt="avatar"
                     width={140}
                     height={140}
+                    className="w-full h-full object-cover"
                   />
                 ) : (
                   <div className="w-full h-full flex items-center justify-center text-gray-500">
@@ -128,13 +120,17 @@ Special Request: ${specialRequest}
                       <span className="text-[10px] text-gray-400">
                         Enter your name
                       </span>
-                      <p className="text-[10px]">{fullName}</p>
+                      <p className="text-[10px] capitalize font-bold">
+                        {fullName}
+                      </p>
                     </div>
                     <div className="w-1/2 h-[45px] border-b border-[#12464E]">
                       <span className="text-[10px] text-gray-400 pl-1">
                         Enter your email *
                       </span>
-                      <p className="text-[10px] pl-1">{email}</p>
+                      <p className="text-[11px] pl-1 capitalize font-bold">
+                        {email}
+                      </p>
                     </div>
                   </div>
                   <div className="w-full flex">
@@ -142,7 +138,7 @@ Special Request: ${specialRequest}
                       <span className="text-[10px] text-gray-400">
                         ticket type:
                       </span>
-                      <p className="text-[10px]">
+                      <p className="text-[11px] capitalize font-bold">
                         {selectedTicket
                           ? selectedTicket.label === "free"
                             ? "free"
@@ -154,14 +150,18 @@ Special Request: ${specialRequest}
                       <span className="text-[10px] text-gray-400 pl-1">
                         Ticket for :
                       </span>
-                      <p className="text-[10px] pl-1">{numberOfTickets}</p>
+                      <p className="text-[11px] pl-1 font-bold">
+                        {numberOfTickets}
+                      </p>
                     </div>
                   </div>
                   <div className="w-full h-[65px] flex flex-col pt-1">
                     <span className="text-[10px] text-gray-400">
                       Special request?
                     </span>
-                    <p className="text-[10px] pl-1">{specialRequest}</p>
+                    <p className="text-[11px] pl-1 font-bold">
+                      {specialRequest}
+                    </p>
                   </div>
                 </div>
               </div>

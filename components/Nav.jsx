@@ -22,7 +22,7 @@ const Nav = () => {
   }, []);
 
   const navWidthClass = isScrolled
-    ? "w-full h-[80px] fixed sm:top-[0%] border-none sm:rounded-none bg-[#05252C]"
+    ? "w-full h-[80px] fixed sm:top-[0%] border-none rounded-none sm:rounded-none bg-[#05252C]"
     : "w-[90vw]";
 
   const getLinkClasses = (href) => {

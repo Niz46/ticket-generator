@@ -130,9 +130,11 @@ const TicketSelection = () => {
             }
             className="w-full h-[48px] bg-transparent border border-[#07373F] p-3 rounded-xl outline-none"
           >
+            <option value={0}>0</option>
             <option value={1}>1</option>
             <option value={2}>2</option>
             <option value={3}>3</option>
+            <option value={4}>4</option>
           </select>
         </div>
 

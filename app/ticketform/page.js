@@ -98,7 +98,7 @@ const TicketForm = () => {
         {/* Header: Title and Progress Bar */}
         <div className="w-full flex flex-col">
           <div className="flex items-center justify-between">
-            <p className="capitalize text-[32px] font-thin">attendee details</p>
+            <p className="capitalize text-[28px] sm:text-[32px] font-thin">attendee details</p>
             <p className="capitalize text-[19px] text-gray-100/75">
               step {currentStep}/{totalSteps}
             </p>

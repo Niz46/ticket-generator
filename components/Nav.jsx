@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { Button } from "./ui/button";
-import { FaArrowRightLong, FaBars } from "react-icons/fa6"; // Import a hamburger icon
+import { FaArrowRightLong, FaBars } from "react-icons/fa6";
 import { CldImage } from "next-cloudinary";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false); // State for hamburger toggle
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -25,7 +25,6 @@ const Nav = () => {
     ? "w-full h-[80px] fixed sm:top-[0%] border-none sm:rounded-none bg-[#05252C]"
     : "w-[90vw]";
 
-  // Active link style helper
   const getLinkClasses = (href) => {
     const baseClasses =
       "capitalize text-[18px] text-[#B3B3B3] hover:text-white duration-500 transition-all";
@@ -58,7 +57,6 @@ const Nav = () => {
         </Link>
       </div>
 
-      {/* Center Nav (hidden on mobile, shown on larger screens) */}
       <ul className="hidden sm:flex gap-6 text-xl">
         <li>
           <Link href="/ticketform" className={getLinkClasses("/ticketform")}>

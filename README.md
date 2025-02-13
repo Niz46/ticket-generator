@@ -38,7 +38,7 @@ Ticket Generator is a modern web application built with Next.js, React, Redux, a
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Niz46/ticket-generator.git
    ```
 
 2. **Navigate to the project directory:**
